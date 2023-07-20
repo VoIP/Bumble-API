@@ -68,4 +68,6 @@ Upon matching you can then send out a message. Links are not liked by Bumble, so
 ```
 Verifying with a pre-taken photo or video works too, it has to have all poses so it can detect which one to use.
 
+https://vimeo.com/847087279
+
 On demand for custom scripts you can also hire me to do it: https://t.me/voipxd
