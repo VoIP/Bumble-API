@@ -2,7 +2,7 @@
 
 This is a Wrapper using ~~Selenium~~ **Requests** for a Privated API, which you can obtain access to by buying it from https://shoppy.gg/@xvoip.
 The API is built completely on the iOS version of Bumble.
-Threads are limited at 500, else my server will explode.
+Threads are limited at 500 per person, else my server will explode.
 
 # Installation
 
