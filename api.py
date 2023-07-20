@@ -43,7 +43,7 @@ class Bumble:
                              json={'api_key': self.api_key, 'biography': biography,
                                    'proxy': 'http://user:pass@ip:port'}).json()['status']
 
-    def verify_account(self, cookies, picture):
+    def verify_account(self, cookies, pictures_path):
         return requests.post(self.endpoint + '/verification', cookies=cookies,
-                             json={'api_key': self.api_key, 'verification_picture': picture,
+                             json={'api_key': self.api_key, 'verification_picture': pictures_path,
                                    'proxy': 'http://user:pass@ip:port'}).json()['status']
