@@ -30,9 +30,9 @@ class Bumble:
                              json={'api_key': self.api_key, 'user_id': user_id, 'like': 'True or False',
                                    'proxy': 'http://user:pass@ip:port'}).json()['status']
 
-    def message(self, cookies, message):
+    def message(self, cookies, message, proxies):
         user_id = \
-            requests.get(self.endpoint + '/most_recent', cookies=cookies, headers={'api_key': self.api_key}).json()[
+            requests.get(self.endpoint + '/most_recent', cookies=cookies, headers={'api_key': self.api_key}, proxies=proxies).json()[
                 'user_id']
         return requests.post(self.endpoint + '/message', cookies=cookies,
                              json={'api_key': self.api_key, 'user_id': user_id, 'message': message,
