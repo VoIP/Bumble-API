@@ -24,8 +24,8 @@ class Bumble:
                                                               'api_key_number': self.five_sim_api,
                                                               'proxy': 'http://user:pass@ip:port'}).json()['cookies']
 
-    def swipe(self, cookies):
-        user_id = requests.get(self.endpoint + '/current_swipe', cookies=cookies).json()['user_id']
+    def swipe(self, cookies, proxies):
+        user_id = requests.get(self.endpoint + '/current_swipe', cookies=cookies, proxies=proxies).json()['user_id']
         return requests.post(self.endpoint + '/swipe', cookies=cookies,
                              json={'api_key': self.api_key, 'user_id': user_id, 'like': 'True or False',
                                    'proxy': 'http://user:pass@ip:port'}).json()['status']
